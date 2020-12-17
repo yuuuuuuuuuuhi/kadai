@@ -1,11 +1,14 @@
 #!/usr/bin/python3
+
+import re
                 
 def calc(A,B):
-        ax=str(A)
-        bx=str(B)
-        if ax.isdigit() and bx.isdigit():
-                a=float(ax)
-                b=float(bx)
+        ai=str(A)
+        bi=str(B)
+        p = re.compile('\d+(\.\d+)?')
+        if p.match(ai) or p.match(bi):
+                a=float(ai)
+                b=float(bi)
                 if 0<a and a<b and b<1000:
                         valid=True
                 else:
