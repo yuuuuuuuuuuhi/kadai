@@ -22,7 +22,7 @@ class TestCalc(unittest.TestCase):
         self.assertEqual(calc(998, 999), 997002)
 
     def test_near_max_range_multiplication(self):
-        self.assertEqual(calc(999, 999), -1)
+        self.assertEqual(calc(999, 999), 998001)
 
     def test_negative_and_positive_input(self):
         self.assertEqual(calc(-1, 1), -1)
